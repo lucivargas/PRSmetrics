@@ -36,7 +36,7 @@ prob_case <- plogis(mu + beta * pgs)
 outcome <- rbinom(n, size = 1, prob = prob_case)
 
 # Run the function
-res <- calc_or(pgs, outcome)
+res <- calc_or(pgs, outcome, pgs_quantiles = seq(0, 1, by=0.1))
 
 # View results
 res$results
