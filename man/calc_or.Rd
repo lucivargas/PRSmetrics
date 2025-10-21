@@ -7,20 +7,20 @@
 calc_or(pgs, outcome, pgs_quantiles = seq(0, 1, 0.1), create_plot = T)
 }
 \arguments{
-\item{pgs}{Numeric vector. The total PGS value per individual.}
+\item{pgs}{A numeric list with the PGS value per individual.}
 
-\item{outcome}{Factor vector. A binary vector encoding the outcome (e.g., case = 1 and control = 0).}
+\item{outcome}{A binary vector encoding the outcome per individual (case = 1 and control = 0).}
 
-\item{pgs_quantiles}{List. A list specifying all intervals of the PGS quantiles to contrast. Values must span from 0 to 1. Defaults to deciles (0.1 increments).}
+\item{pgs_quantiles}{A list specifying all intervals of the PGS quantiles to contrast. Values must span from 0 to 1. Defaults to deciles (0.1 increments).}
 
-\item{create_plot}{Logical. A logical indicating whether to generate a plot of the OR point estimates and intervals. Defaults to false.}
+\item{create_plot}{A logical indicating whether to generate a plot of the OR point estimates and intervals. Defaults to True.}
 }
 \value{
 Results: A tibble with odds ratios, confidence intervals and p-values for each PGS quantile when compared to the baseline (lowest quantile).
 
 Quantiles: A list of the PGS quantiles used.
 
-Plot: A ggplot object showing odds ratios by PGS quantile
+Plot: A ggplot object showing odds ratios (y axis) by PGS quantile (x axis).
 }
 \description{
 This function calculates odds ratios of a binary outcome across quantiles of a PGS distribution

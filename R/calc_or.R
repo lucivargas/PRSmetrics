@@ -2,13 +2,13 @@
 #'
 #' This function calculates odds ratios of a binary outcome across quantiles of a PGS distribution
 #'
-#' @param pgs Numeric vector. The total PGS value per individual.
-#' @param outcome Factor vector. A binary vector encoding the outcome (e.g., case = 1 and control = 0).
-#' @param pgs_quantiles List. A list specifying all intervals of the PGS quantiles to contrast. Values must span from 0 to 1. Defaults to deciles (0.1 increments).
-#' @param create_plot Logical. A logical indicating whether to generate a plot of the OR point estimates and intervals. Defaults to false.
+#' @param pgs A numeric list with the PGS value per individual.
+#' @param outcome A binary vector encoding the outcome per individual (case = 1 and control = 0).
+#' @param pgs_quantiles A list specifying all intervals of the PGS quantiles to contrast. Values must span from 0 to 1. Defaults to deciles (0.1 increments).
+#' @param create_plot A logical indicating whether to generate a plot of the OR point estimates and intervals. Defaults to True.
 #' @return Results: A tibble with odds ratios, confidence intervals and p-values for each PGS quantile when compared to the baseline (lowest quantile).
 #' @return Quantiles: A list of the PGS quantiles used.
-#' @return Plot: A ggplot object showing odds ratios by PGS quantile
+#' @return Plot: A ggplot object showing odds ratios (y axis) by PGS quantile (x axis).
 #' @examples
 #' set.seed(123)
 #' n <- 10000

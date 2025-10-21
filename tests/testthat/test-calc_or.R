@@ -14,7 +14,7 @@ test_that("calc_OR returns a tibble with expected columns", {
   outcome <- rbinom(n, size = 1, prob = prob_case)
 
   # Run the function
-  res <- calc_or(pgs, outcome)
+  res <- calc_or(pgs, outcome, pgs_quantiles = seq(0, 1, by=0.1))
 
   # Check class
   expect_type(res, "list")
