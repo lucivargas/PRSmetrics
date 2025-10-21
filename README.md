@@ -31,7 +31,7 @@ library(PRSmetrics)
 set.seed(123)
 pgs <- rnorm(10000, mean = 0, sd = 4)
 beta <- 0.3 # effect size
-mu <- qlogis(0.3) # set of prevalence 30%
+mu <- qlogis(0.3) # set prevalence to 30%
 prob_case <- plogis(mu + beta * pgs)
 outcome <- rbinom(n, size = 1, prob = prob_case)
 
