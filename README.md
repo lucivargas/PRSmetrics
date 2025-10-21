@@ -24,14 +24,14 @@ Dependencies:
 ## Example: Simulating a PGS dataset and calculating ORs
 
 ```r
+# Load package
 library(PRSmetrics)
 
 # Simulate PGS dataset
 set.seed(123)
-n <- 10000
-pgs <- rnorm(n, mean = 0, sd = 4)
-beta <- 0.3
-mu <- qlogis(0.3)
+pgs <- rnorm(10000, mean = 0, sd = 4)
+beta <- 0.3 # effect size
+mu <- qlogis(0.3) # set of prevalence 30%
 prob_case <- plogis(mu + beta * pgs)
 outcome <- rbinom(n, size = 1, prob = prob_case)
 
@@ -45,5 +45,5 @@ res$plot
 ```
 
 <div align="center">
-  <img src="man/figures/example_calc_or_plot.png" width="50%"/>
+  <img src="man/figures/example_calc_or_plot.png" width="60%"/>
 </div>
