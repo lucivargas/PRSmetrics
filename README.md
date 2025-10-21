@@ -39,8 +39,11 @@ outcome <- rbinom(n, size = 1, prob = prob_case)
 res <- calc_or(pgs, outcome)
 
 # View results
+res$results
 res$quantiles
 res$plot
 ```
-![OR plot](man/figures/example_calc_or_plot.png){width=300px}
 
+<div align="center">
+  <img src="man/figures/example_calc_or_plot.png" width="50%"/>
+</div>
